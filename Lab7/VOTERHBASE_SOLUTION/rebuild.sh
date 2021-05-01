@@ -1,5 +1,5 @@
 #!/bin/bash
-export HADOOP_HOME=/home/hdoop/hadoop-0.20.2
+# export HADOOP_HOME=/home/hdoop/hadoop-0.20.2
 export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native/Linux-amd64-64
 export CLASSPATH=`hbase classpath`
 export HADOOP_CLASSPATH=$CLASSPATH
