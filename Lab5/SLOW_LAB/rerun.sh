@@ -5,9 +5,19 @@ export CLASSPATH=$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop
 export HADOOP_CLASSPATH=$CLASSPATH
 USER=`whoami`
 
-rm -rf /home/$USER/5/SLOW_LAB/OUT
+
+echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
+rm -rf /home/$USER/Lab5/SLOW_LAB/OUT
+hadoop fs -rm -r /home/$USER/Lab5/SLOW_LAB
+
+hadoop fs -mkdir -p /home/$USER/Lab5/SLOW_LAB/DATA
+hadoop fs -put /home/$USER/Lab5/SLOW_LAB/DATA/receipts.txt /home/$USER/Lab5/SLOW_LAB/DATA
+
 
 ARGS=$1
 
-hadoop jar Slow.jar Slow.SlowDriver $ARGS /home/$USER/5/SLOW_LAB/DATA/receipts.txt /home/$USER/5/SLOW_LAB/OUT 
+hadoop jar Slow.jar Slow.SlowDriver $ARGS /home/$USER/Lab5/SLOW_LAB/DATA/receipts.txt /home/$USER/Lab5/SLOW_LAB/OUT 
+
+
+hadoop fs -copyToLocal  /home/$USER/Lab5/SLOW_LAB/OUT /home/$USER/Lab5/SLOW_LAB/OUT
 
