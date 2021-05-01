@@ -29,8 +29,8 @@ public class ReceiptsDriver extends Configured implements Tool {
       job.setJarByClass(ReceiptsDriver.class);
       job.setMapperClass(ReceiptsMapper.class);
 
-      // TODO comment out the Reducer class definition
-      job.setReducerClass(ReceiptsReducer.class);
+      // TODO uncomment the Reducer class definition
+      // job.setReducerClass(ReceiptsReducer.class);
 
       job.setInputFormatClass(TextInputFormat.class);
       job.setOutputKeyClass(Text.class);

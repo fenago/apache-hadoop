@@ -9,7 +9,7 @@ USER=`whoami`
 
 echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
 rm -rf /home/$USER/Lab3/RECEIPTS_LAB/OUT
-hadoop fs -rm -r /home/$USER/Lab3/RECEIPTS_LAB/DATA/
+hadoop fs -rm -r /home/$USER/Lab3/RECEIPTS_LAB/
 
 
 hadoop fs -mkdir -p /home/$USER/Lab3/RECEIPTS_LAB/DATA/
