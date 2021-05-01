@@ -8,4 +8,11 @@ export HADOOP_CLASSPATH=$CLASSPATH
 USER=`whoami`
 
 rm -rf /home/$USER/Lab3/RECEIPTS_LAB/OUT
+
+hadoop fs -mkdir -p /home/$USER/Lab3/RECEIPTS_LAB/DATA/receipts.txt
+hadoop fs -put /home/$USER/Lab3/RECEIPTS_LAB/DATA/receipts.txt /home/$USER/Lab3/RECEIPTS_LAB/DATA
+
 hadoop jar Receipts.jar Receipts.ReceiptsDriver /home/$USER/Lab3/RECEIPTS_LAB/DATA/receipts.txt /home/$USER/Lab3/RECEIPTS_LAB/OUT 
+
+hadoop fs -copyToLocal  /home/hdoop/Lab3/RECEIPTS_LAB/OUT /home/hdoop/Lab3/RECEIPTS_LAB/OUT
+
