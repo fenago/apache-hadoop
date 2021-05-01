@@ -6,7 +6,11 @@ export HADOOP_CLASSPATH=$CLASSPATH
 
 USER=`whoami`
 
+
+echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
 rm -rf /home/$USER/Lab4/UNIVERSITY_SOLUTION/OUT
+hadoop fs -rm -r /home/$USER/Lab4/UNIVERSITY_SOLUTION/OUT
+
 
 hadoop fs -mkdir -p /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA
 hadoop fs -put /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA/university.txt /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA

@@ -7,9 +7,11 @@ export HADOOP_CLASSPATH=$CLASSPATH
 
 USER=`whoami`
 
+echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
 rm -rf /home/$USER/Lab3/RECEIPTS_SOLUTION/OUT
+hadoop fs -rm -r /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA/
 
-hadoop fs -mkdir -p /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA/receipts.txt
+hadoop fs -mkdir -p /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA/
 hadoop fs -put /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA/receipts.txt /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA
 
 hadoop jar Receipts.jar Receipts.ReceiptsDriver /home/$USER/Lab3/RECEIPTS_SOLUTION/DATA/receipts.txt /home/$USER/Lab3/RECEIPTS_SOLUTION/OUT 
