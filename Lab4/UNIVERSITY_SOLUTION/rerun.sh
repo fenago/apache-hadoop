@@ -6,7 +6,11 @@ export HADOOP_CLASSPATH=$CLASSPATH
 
 USER=`whoami`
 
-rm -rf /home/$USER/4/UNIVERSITY_SOLUTION/OUT
+rm -rf /home/$USER/Lab4/UNIVERSITY_SOLUTION/OUT
 
-hadoop jar University.jar University.UniversityDriver /home/$USER/4/UNIVERSITY_SOLUTION/DATA/university.txt /home/$USER/4/UNIVERSITY_SOLUTION/OUT
+hadoop fs -mkdir -p /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA
+hadoop fs -put /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA/university.txt /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA
 
+hadoop jar University.jar University.UniversityDriver /home/$USER/Lab4/UNIVERSITY_SOLUTION/DATA/university.txt /home/$USER/Lab4/UNIVERSITY_SOLUTION/OUT
+
+hadoop fs -copyToLocal  /home/$USER/Lab4/UNIVERSITY_LAB/OUT /home/$USER/Lab4/UNIVERSITY_LAB/OUT

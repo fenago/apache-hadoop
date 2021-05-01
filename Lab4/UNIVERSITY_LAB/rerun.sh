@@ -9,5 +9,9 @@ USER=`whoami`
 
 rm -rf /home/$USER/Lab4/UNIVERSITY_LAB/OUT
 
+hadoop fs -mkdir -p /home/$USER/Lab4/UNIVERSITY_LAB/DATA
+hadoop fs -put /home/$USER/Lab4/UNIVERSITY_LAB/DATA/university.txt /home/$USER/Lab4/UNIVERSITY_LAB/DATA
+
 hadoop jar University.jar University.UniversityDriver /home/$USER/Lab4/UNIVERSITY_LAB/DATA/university.txt /home/$USER/Lab4/UNIVERSITY_LAB/OUT
 
+hadoop fs -copyToLocal  /home/$USER/Lab4/UNIVERSITY_LAB/OUT /home/$USER/Lab4/UNIVERSITY_LAB/OUT
