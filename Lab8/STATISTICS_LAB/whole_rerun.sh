@@ -22,4 +22,4 @@ hadoop fs -put -f /home/$USER/Lab8/STATISTICS_LAB/DATA/university.txt /home/$USE
 hadoop jar WholeJob.jar WholeJob.WholeJobDriver -D var1="verbal" -D var2="math" /home/$USER/Lab8/STATISTICS_LAB/DATA/university.txt /home/$USER/Lab8/STATISTICS_LAB/UNIV_OUT /home/$USER/Lab8/STATISTICS_LAB/STAT_OUT
 
 
-hadoop fs -copyToLocal  /home/$USER/Lab8/STATISTICS_LAB/ /home/$USER/Lab8/STATISTICS_LAB/
+hadoop fs -copyToLocal  /home/$USER/Lab8/STATISTICS_LAB/ /home/$USER/Lab8/STATISTICS_LAB/output

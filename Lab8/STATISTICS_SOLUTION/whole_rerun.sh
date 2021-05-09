@@ -7,9 +7,7 @@ export CLASSPATH=$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop
 USER=`whoami`
 
 
-echo "Deleting OUT folder from local and hadoop filesystem (ignore not found warning)"
-rm -rf /home/$USER/Lab8/STATISTICS_SOLUTION/UNIV_OUT
-rm -rf /home/$USER/Lab8/STATISTICS_SOLUTION/STAT_OUT
+echo "Deleting OUT folder from hadoop filesystem (ignore not found warning)"
 
 
 hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION
@@ -19,8 +17,7 @@ hadoop fs -mkdir -p /home/$USER/Lab8/STATISTICS_SOLUTION/DATA
 hadoop fs -put -f /home/$USER/Lab8/STATISTICS_SOLUTION/DATA/university.txt /home/$USER/Lab8/STATISTICS_SOLUTION/DATA
 
 
-
 hadoop jar WholeJob.jar WholeJob.WholeJobDriver -D var1="verbal" -D var2="math" /home/$USER/Lab8/STATISTICS_SOLUTION/DATA/university.txt /home/$USER/Lab8/STATISTICS_SOLUTION/UNIV_OUT /home/$USER/Lab8/STATISTICS_SOLUTION/STAT_OUT
 
 
-hadoop fs -copyToLocal  /home/$USER/Lab8/STATISTICS_SOLUTION/ /home/$USER/Lab8/STATISTICS_SOLUTION/
+hadoop fs -copyToLocal  /home/$USER/Lab8/STATISTICS_SOLUTION/ /home/$USER/Lab8/STATISTICS_SOLUTION/output
