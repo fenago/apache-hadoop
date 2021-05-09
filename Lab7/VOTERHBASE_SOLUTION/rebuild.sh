@@ -1,7 +1,7 @@
 #!/bin/bash
 # export HADOOP_HOME=/home/hdoop/hadoop-0.20.2
 export LD_LIBRARY_PATH=$HADOOP_HOME/lib/native/Linux-amd64-64
-export CLASSPATH=`hbase classpath`
+export CLASSPATH=`$HBASE_HOME/bin/hbase classpath`
 export HADOOP_CLASSPATH=$CLASSPATH
 
 javac -d classes VoterHbaseMapper.java
