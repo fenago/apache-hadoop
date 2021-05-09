@@ -23,8 +23,8 @@ public class VoterMapper  extends Mapper <LongWritable,Text,Text,IntWritable> {
       // TODO check number of tokens in iterator 
       if(iterator.countTokens() != 6) {
          // increment bad record counter
-         //context.getCounter("MYGROUP", "bad_num_tokens").increment(1);
-        log.error("incorrect number of tokens:" + value.toString());
+         context.getCounter("MYGROUP", "bad_num_tokens").increment(1);
+         //log.error("incorrect number of tokens:" + value.toString());
          //System.err.println("incorrect number of tokens: " + value.toString());
          return;
       }
