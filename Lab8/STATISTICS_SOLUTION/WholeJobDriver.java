@@ -44,7 +44,7 @@ public class WholeJobDriver extends Configured implements Tool {
 
       FileSystem fs = FileSystem.get(getConf());
       Path resultsFile = new Path(args[1] + "/part-r-00000");
-      fs.copyFromLocalFile(resultsFile, new Path("/user/user01/8/DISTRIBUTED_CACHE/stats.txt"));
+      fs.copyFromLocalFile(resultsFile, new Path("/home/hdoop/Lab8/STATISTICS_SOLUTION/stats.txt"));
       DistributedCache.addCacheFile(resultsFile.toUri(), getConf());
 
 

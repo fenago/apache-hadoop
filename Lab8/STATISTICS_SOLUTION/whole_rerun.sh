@@ -12,8 +12,7 @@ rm -rf /home/$USER/Lab8/STATISTICS_SOLUTION/UNIV_OUT
 rm -rf /home/$USER/Lab8/STATISTICS_SOLUTION/STAT_OUT
 
 
-hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION/UNIV_OUT
-hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION/STAT_OUT
+hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION
 
 
 hadoop fs -mkdir -p /home/$USER/Lab8/STATISTICS_SOLUTION/DATA
