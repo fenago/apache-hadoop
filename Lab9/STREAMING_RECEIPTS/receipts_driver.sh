@@ -18,7 +18,7 @@ echo -e "summary\t1901_63" | ./receipts_reducer.sh | od -c
 # 3) map/reduce on Hadoop
 export JOBHOME=/home/$USER/Lab9/STREAMING_RECEIPTS
 export CONTRIB=/home/hdoop/hadoop-2.7.0/share/hadoop/tools/lib
-export STREAMINGJAR=hadoop-streaming-2.5.1-mapr-1503.jar
+export STREAMINGJAR=hadoop-streaming-2.7.0.jar
 export THEJARFILE=$CONTRIB/$STREAMINGJAR
 rm -rf $JOBHOME/OUT
 hadoop jar $THEJARFILE \
