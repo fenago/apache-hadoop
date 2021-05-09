@@ -7,10 +7,9 @@ export CLASSPATH=$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop
 USER=`whoami`
 
 
-echo "Deleting OUT folder from local and hadoop filesystem (ignore not found warning)"
-rm -rf /home/$USER/Lab8/STATISTICS_LAB/UNIV_OUT
-rm -rf /home/$USER/Lab8/STATISTICS_LAB/STAT_OUT
-
+echo "Deleting OUT folder hadoop filesystem (ignore not found warning)"
+# rm -rf /home/$USER/Lab8/STATISTICS_LAB/UNIV_OUT
+# rm -rf /home/$USER/Lab8/STATISTICS_LAB/STAT_OUT
 
 hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_LAB
 
