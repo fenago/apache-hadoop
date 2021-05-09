@@ -8,7 +8,7 @@ export CLASSPATH=$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop
 export HADOOP_CLASSPATH=$CLASSPATH
 
 
-echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
+echo "Deleting OUT folder from local and hadoop filesystem (ignore not found warning)"
 rm -rf /home/$USER/Lab5/VOTER_SOLUTION/OUT
 hadoop fs -rm -r -skipTrash /home/$USER/Lab5/VOTER_SOLUTION/
 hadoop fs -rm -r /home/$USER/Lab5/VOTER_SOLUTION/

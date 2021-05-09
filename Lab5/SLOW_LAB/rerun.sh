@@ -6,7 +6,7 @@ export HADOOP_CLASSPATH=$CLASSPATH
 USER=`whoami`
 
 
-echo "Deleting OUT folder from local and hadoop filesystem (if exists)"
+echo "Deleting OUT folder from local and hadoop filesystem (ignore not found warning)"
 rm -rf /home/$USER/Lab5/SLOW_LAB/OUT
 hadoop fs -rm -r /home/$USER/Lab5/SLOW_LAB
 
