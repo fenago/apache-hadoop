@@ -16,7 +16,7 @@ hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION/UNIV_OUT
 hadoop fs -rm -r /home/$USER/Lab8/STATISTICS_SOLUTION/STAT_OUT
 
 
-hadoop fs -mkdir -p /home/$USER/Lab5/VOTER_SOLUTION/DATA/
+hadoop fs -mkdir -p /home/$USER/Lab8/STATISTICS_SOLUTION/DATA
 hadoop fs -put -f /home/$USER/Lab8/STATISTICS_SOLUTION/DATA/university.txt /home/$USER/Lab8/STATISTICS_SOLUTION/DATA
 
 
