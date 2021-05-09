@@ -28,3 +28,7 @@ hadoop jar $THEJARFILE \
   -file receipts_reducer.sh \
   -input  $JOBHOME/DATA/receipts.txt  \
   -output  $JOBHOME/OUT
+
+rm -r $JOBHOME/OUT
+hadoop fs -copyToLocal  $JOBHOME/OUT $JOBHOME/OUT
+
