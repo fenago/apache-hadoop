@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+
+/home/hdoop/restart-yarn.sh > /dev/null
+
+
 USER=`whoami`
 
 

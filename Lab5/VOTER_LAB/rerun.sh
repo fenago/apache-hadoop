@@ -1,5 +1,8 @@
 #!/bin/bash
 
+/home/hdoop/restart-yarn.sh > /dev/null
+
+
 USER=`whoami`
 
 export HADOOP_HOME=/home/hdoop/hadoop-2.7.0

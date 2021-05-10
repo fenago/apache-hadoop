@@ -1,5 +1,8 @@
 #!/bin/bash
 
+/home/hdoop/restart-yarn.sh > /dev/null
+
+
 rm -rf ~/DISTRIBUTED_CACHE/UNIV_OUT
 ARGS=$1
 
